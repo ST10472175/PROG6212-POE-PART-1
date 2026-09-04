@@ -54,7 +54,7 @@ VALUES('E001','Soweto Marathon','2026/10/10','Road Running','Soweto'),
 SELECT * FROM EVENTS;
 --sample query for participant table--
 SELECT * FROM PARTICIPANTS;
-
+--sample query for event organisers--
 
 
 
