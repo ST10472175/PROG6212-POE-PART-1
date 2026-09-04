@@ -1,4 +1,4 @@
-name: Validate Docs Structure
+name: Validate Required Files
 
 on:
   push:
@@ -12,9 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate docs folder
+      - name: Check required files exist
         run: |
-          echo "Checking docs folder structure..."
-          test -d docs/requirements
-          test -d docs/reports
-          echo "Docs validation passed!"
+          echo "Checking required files..."
+          test -f "API ENDPOINT TABLE.pdf"
+          test -f "SQL RESULTS SCREENSHOT.pdf"
+          test -f "PROG ERD.png"
+          echo "Required files validation passed!"
