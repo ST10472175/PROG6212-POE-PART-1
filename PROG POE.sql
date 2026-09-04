@@ -57,6 +57,9 @@ SELECT * FROM PARTICIPANTS;
 --sample query for event organisers--
 SELECT * FROM EVENT_ORGANISERS;
 
+SELECT * FROM EVENTS
+WHERE event_ID ='E001';
+
 
 
 
