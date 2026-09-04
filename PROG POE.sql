@@ -2,6 +2,7 @@
 create database RaceDay;
 use RaceDay;
 --create database tables for the raceday system--
+--create events table--
 create table EVENTS(event_ID varchar(10) primary key,
                     event_Name varchar(50),
                     event_Date varchar(25),
