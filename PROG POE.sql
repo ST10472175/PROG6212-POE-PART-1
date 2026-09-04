@@ -1,3 +1,4 @@
+--Raceday Event Management System Database--
 create database RaceDay;
 use RaceDay;
 
