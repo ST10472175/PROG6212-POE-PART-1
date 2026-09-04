@@ -61,6 +61,10 @@ SELECT * FROM EVENT_ORGANISERS;
 SELECT * FROM EVENTS
 WHERE event_ID ='E001';
 
+SELECT *
+FROM PARTICIPANTS
+WHERE participant_name = 'Naledi Matlala';
+
 
 
 
