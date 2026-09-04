@@ -19,7 +19,7 @@ create table PARTICIPANTS(participant_ID varchar(15) primary key,
                           participant_contactDetails varchar(10) UNIQUE);
 
 create table CATEGORIES(category_ID varchar(20) primary key,
-                      category_name varchar(40) NOT NULL,
+                      category_name varchar(40) NOT NULL,--define constraints--
                       event_id varchar(10),
                       --define relationships between raceday tables--
                       FOREIGN KEY(event_id) REFERENCES EVENTS(event_ID));
