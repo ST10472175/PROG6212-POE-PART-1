@@ -55,6 +55,7 @@ SELECT * FROM EVENTS;
 --sample query for participant table--
 SELECT * FROM PARTICIPANTS;
 --sample query for event organisers--
+SELECT * FROM EVENT_ORGANISERS;
 
 
 
