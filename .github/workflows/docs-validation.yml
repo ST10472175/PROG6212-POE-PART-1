@@ -1,78 +1,37 @@
-name: Documentation Validation
+name: Validate Project Structure
 
 on:
   push:
-    branches:
-      - main
-      - master
   pull_request:
-    branches:
-      - main
-      - master
 
 jobs:
-  validate-docs:
-    name: Validate Project Documentation
+  validate:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check docs folder
+      - name: Validate project structure
         run: |
-          echo "Checking /docs folder..."
+          echo "Checking PROG6212_POE project structure..."
 
-          if [ ! -d "docs" ]; then
-            echo "ERROR: /docs folder does not exist."
-            exit 1
-          fi
+          test -d src
+          test -d src/main
+          test -d src/test
 
-          echo "/docs folder exists."
+          test -d docs
+          test -d docs/requirements
+          test -d docs/reports
 
-      - name: Check ERD
-        run: |
-          if [ ! -f "docs/ERD.png" ]; then
-            echo "ERROR: docs/ERD.png is missing."
-            exit 1
-          fi
+          test -d assets
+          test -d data
+          test -d config
+          test -d lib
+          test -d scripts
 
-          echo "ERD found."
+          test -f README.md
+          test -f .gitignore
+          test -f project-plan.md
 
-      - name: Check endpoint plan
-        run: |
-          if [ ! -f "docs/endpoint-plan.docx" ]; then
-            echo "ERROR: docs/endpoint-plan.docx is missing."
-            exit 1
-          fi
-
-          echo "Endpoint plan found."
-
-      - name: Check SQL script
-        run: |
-          if [ ! -f "docs/database.sql" ]; then
-            echo "ERROR: docs/database.sql is missing."
-            exit 1
-          fi
-
-          echo "SQL script found."
-
-      - name: Validate SQL script is not empty
-        run: |
-          if [ ! -s "docs/database.sql" ]; then
-            echo "ERROR: SQL script is empty."
-            exit 1
-          fi
-
-          echo "SQL script contains data."
-
-      - name: Display repository structure
-        run: |
-          echo "Repository structure:"
-          find . -maxdepth 3 -type f | sort
-
-      - name: Validation successful
-        run: |
-          echo "======================================"
-          echo "Documentation validation successful!"
-          echo "======================================"
+          echo "Project structure validation passed!"
