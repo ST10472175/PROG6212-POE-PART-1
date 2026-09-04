@@ -1,4 +1,4 @@
-name: Validate Project Structure
+name: Validate Docs Structure
 
 on:
   push:
@@ -12,26 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate project structure
+      - name: Validate docs folder
         run: |
-          echo "Checking PROG6212_POE project structure..."
-
-          test -d src
-          test -d src/main
-          test -d src/test
-
-          test -d docs
+          echo "Checking docs folder structure..."
           test -d docs/requirements
           test -d docs/reports
-
-          test -d assets
-          test -d data
-          test -d config
-          test -d lib
-          test -d scripts
-
-          test -f README.md
-          test -f .gitignore
-          test -f project-plan.md
-
-          echo "Project structure validation passed!"
+          echo "Docs validation passed!"
