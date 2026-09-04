@@ -9,6 +9,7 @@ create table EVENTS(event_ID varchar(10) primary key,
                     event_location varchar(35),
                     event_type varchar(25));
 
+--create organiser table--
 create table EVENT_ORGANISERS(organiser_ID varchar(15) primary key,
                              organiser_name varchar(50) NOT NULL,
                              organiser_contactDetails char(10));
