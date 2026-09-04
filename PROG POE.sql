@@ -50,8 +50,10 @@ VALUES('E001','Soweto Marathon','2026/10/10','Road Running','Soweto'),
       ('E002','Cape Town Cycle Tour','2027/01/07','Cycling','Cape Town'),
       ('E003','Two Oceans Fun Walk','2026/12/04','Walking','Pietermaritzburg');
 
+--sample queries for the raceday system--
 SELECT * FROM EVENTS;
-
+SELECT * FROM PARTICIPANTS;
+SELECT * FROM EVENT_ORGANISERS;
 
 
 
