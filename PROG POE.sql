@@ -61,6 +61,7 @@ SELECT * FROM EVENT_ORGANISERS;
 SELECT * FROM EVENTS
 WHERE event_ID ='E001';
 
+--useful query to find participant--
 SELECT *
 FROM PARTICIPANTS
 WHERE participant_name = 'Naledi Matlala';
