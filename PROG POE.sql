@@ -66,6 +66,8 @@ SELECT *
 FROM PARTICIPANTS
 WHERE participant_name = 'Naledi Matlala';
 
+SELECT COUNT(*) AS TOTALEVENTS
+FROM EVENTS;
 
 
 
