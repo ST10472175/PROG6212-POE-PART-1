@@ -36,6 +36,7 @@ create table ASSIGNMENT(entry_id int primary key,
                         FOREIGN KEY(participant_id) REFERENCES PARTICIPANTS(participant_ID),
                         FOREIGN KEY(event_id) REFERENCES EVENTS(event_id));
 
+--insert sample data into tables--
 INSERT INTO EVENT_ORGANISERS(organiser_ID,organiser_name,organiser_contactDetails)
 VALUES('O001','Kgothatso Masubelele','0824697891'),
       ('O002','Gift Ramavhinyana','0719656868');
