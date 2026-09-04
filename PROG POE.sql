@@ -52,7 +52,8 @@ VALUES('E001','Soweto Marathon','2026/10/10','Road Running','Soweto'),
 
 --sample queries for the raceday system--
 SELECT * FROM EVENTS;
-SELECT * FROM PARTICIPANTS;
+--sample query for participant table--
+;
 SELECT * FROM EVENT_ORGANISERS;
 
 
