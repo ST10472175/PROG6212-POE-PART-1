@@ -21,6 +21,7 @@ create table PARTICIPANTS(participant_ID varchar(15) primary key,
 create table CATEGORIES(category_ID varchar(20) primary key,
                       category_name varchar(40) NOT NULL,
                       event_id varchar(10),
+                      --define relationships between raceday tables--
                       FOREIGN KEY(event_id) REFERENCES EVENTS(event_ID));
 
 create table RESULTS(results_id varchar(20) primary key,
